@@ -32,6 +32,7 @@ export default function PriceTable({ prices, variant_id, product_id }: PriceTabl
 
       const res = await fetch(`${__BACKEND_URL__||''}/admin/plugin/pricefx/prices`, {
         method: "PUT",
+        credentials:'include',
         headers: {
           "Content-Type": "application/json"
         },

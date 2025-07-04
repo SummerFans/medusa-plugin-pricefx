@@ -19,6 +19,7 @@ const VariantAutomaticPriceConversionWidget = ({ data }: any) => {
     setLoading(true);
     const res = await fetch(`${__BACKEND_URL__||''}/admin/plugin/pricefx`, {
       method: 'POST',
+      credentials:'include',
       headers: {
         "Content-Type": "application/json"
       },
@@ -39,6 +40,7 @@ const VariantAutomaticPriceConversionWidget = ({ data }: any) => {
 
     const res = await fetch(`${__BACKEND_URL__||''}/admin/plugin/pricefx/prices`, {
       method: "POST",
+      credentials:'include',
       headers: {
         "Content-Type": "application/json"
       },
@@ -62,7 +64,10 @@ const VariantAutomaticPriceConversionWidget = ({ data }: any) => {
 
   useEffect(() => {
     const getCurrencies = async () => {
-      const res = await fetch(`${__BACKEND_URL__||''}/admin/plugin/pricefx/currencies`);
+      const res = await fetch(`${__BACKEND_URL__||''}/admin/plugin/pricefx/currencies`,{
+        method:"GET",
+        credentials:'include',
+      });
       const { currencies } = await res.json();
       setCurrencies(currencies)
       setCurrency(currencies[0])

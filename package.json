@@ -1,6 +1,6 @@
 {
   "name": "medusa-plugin-pricefx",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Medusa Currency Converter Plugin",
   "author": "SummerFans (https://github.com/SummerFans)",
   "license": "MIT",
