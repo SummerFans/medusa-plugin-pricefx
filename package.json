@@ -1,6 +1,6 @@
 {
   "name": "medusa-plugin-pricefx",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Medusa Currency Converter Plugin",
   "author": "SummerFans (https://github.com/SummerFans)",
   "license": "MIT",
@@ -44,7 +44,7 @@
     "@medusajs/icons": "^2.7.0",
     "@medusajs/medusa": "^2.7.0",
     "@medusajs/test-utils": "^2.7.0",
-    "@medusajs/ui": "^4.0.4",
+    "@medusajs/ui": "^4.0.3",
     "@mikro-orm/cli": "6.4.3",
     "@mikro-orm/core": "6.4.3",
     "@mikro-orm/knex": "6.4.3",
