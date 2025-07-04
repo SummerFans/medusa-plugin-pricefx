@@ -4,6 +4,8 @@ import { WandSparkle } from '@medusajs/icons';
 import { useEffect, useState } from 'react';
 import PriceTable from '../components/price-table';
 
+declare const __BACKEND_URL__: string;
+
 const VariantAutomaticPriceConversionWidget = ({ data }: any) => {
 
   const [loading, setLoading] = useState(false);
@@ -15,7 +17,7 @@ const VariantAutomaticPriceConversionWidget = ({ data }: any) => {
 
   const changeCurrencyHandle = async (value: string) => {
     setLoading(true);
-    const res = await fetch('/admin/plugin/pricefx', {
+    const res = await fetch(`${__BACKEND_URL__||''}/admin/plugin/pricefx`, {
       method: 'POST',
       headers: {
         "Content-Type": "application/json"
@@ -35,7 +37,7 @@ const VariantAutomaticPriceConversionWidget = ({ data }: any) => {
     setPrices(null);
     const amountNum = parseFloat(amount as string);
 
-    const res = await fetch('/admin/plugin/pricefx/prices', {
+    const res = await fetch(`${__BACKEND_URL__||''}/admin/plugin/pricefx/prices`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -60,7 +62,7 @@ const VariantAutomaticPriceConversionWidget = ({ data }: any) => {
 
   useEffect(() => {
     const getCurrencies = async () => {
-      const res = await fetch('/admin/plugin/pricefx/currencies');
+      const res = await fetch(`${__BACKEND_URL__||''}/admin/plugin/pricefx/currencies`);
       const { currencies } = await res.json();
       setCurrencies(currencies)
       setCurrency(currencies[0])

@@ -1,5 +1,7 @@
 import { Button, CurrencyInput, Table, Text, usePrompt, toast } from "@medusajs/ui";
 
+declare const __BACKEND_URL__: string;
+
 interface PriceTableProps {
   prices: any[] | null;
   product_id: string,
@@ -28,7 +30,7 @@ export default function PriceTable({ prices, variant_id, product_id }: PriceTabl
         }
       })
 
-      const res = await fetch('/admin/plugin/pricefx/prices', {
+      const res = await fetch(`${__BACKEND_URL__||''}/admin/plugin/pricefx/prices`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json"
