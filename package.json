@@ -1,6 +1,6 @@
 {
   "name": "medusa-plugin-pricefx",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Medusa Currency Converter Plugin",
   "author": "SummerFans (https://github.com/SummerFans)",
   "license": "MIT",
@@ -38,18 +38,6 @@
     "prepublishOnly": "medusa plugin:build"
   },
   "devDependencies": {
-    "@medusajs/admin-sdk": "^2.7.0",
-    "@medusajs/cli": "^2.7.0",
-    "@medusajs/framework": "^2.7.0",
-    "@medusajs/icons": "^2.7.0",
-    "@medusajs/medusa": "^2.7.0",
-    "@medusajs/test-utils": "^2.7.0",
-    "@medusajs/ui": "^4.0.3",
-    "@mikro-orm/cli": "6.4.3",
-    "@mikro-orm/core": "6.4.3",
-    "@mikro-orm/knex": "6.4.3",
-    "@mikro-orm/migrations": "6.4.3",
-    "@mikro-orm/postgresql": "6.4.3",
     "@swc/core": "1.5.7",
     "@types/node": "^20.0.0",
     "@types/react": "^18.3.2",
@@ -71,14 +59,7 @@
     "@medusajs/icons": "^2.7.0",
     "@medusajs/medusa": "^2.7.0",
     "@medusajs/test-utils": "^2.7.0",
-    "@medusajs/ui": "^4.0.3",
-    "@mikro-orm/cli": "6.4.3",
-    "@mikro-orm/core": "6.4.3",
-    "@mikro-orm/knex": "6.4.3",
-    "@mikro-orm/migrations": "6.4.3",
-    "@mikro-orm/postgresql": "6.4.3",
-    "awilix": "^8.0.1",
-    "pg": "^8.13.0"
+    "@medusajs/ui": "^4.0.3"
   },
   "engines": {
     "node": ">=20"
